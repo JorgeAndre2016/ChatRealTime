@@ -24,7 +24,7 @@ function entrar(sala){
 
 	// Muda view
 	var page_home = document.querySelector('#page-home');
-	var page_sala = document.querySelector('#page-chat');
+	var page_sala = document.querySelector('#page-sala');
 
 	page_home.style.display = 'none';
 	page_sala.style.display = 'block';
@@ -38,7 +38,7 @@ function entrar(sala){
 		// Se retornou dados
 		console.log(salaRetorno);
 		if (salaRetorno) {
-			var titulo = document.querySelector('#header-room .title');
+			var titulo = document.querySelector('#header-sala .title');
 			// Atribui o título da sala
 			titulo.innerText = salaRetorno.titulo;
 			carregarMensagensSala(sala);
