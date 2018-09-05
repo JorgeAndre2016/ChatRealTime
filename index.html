@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Realchat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- Página 1 -->
+	<div id="page-home">
+		<header>
+			<section>Realchat</section>
+			<button type="button">Sair</button>
+		</header>
+
+		<div id="salas">
+			<ul>
+				<li><a href="#" onclick="entrar('ada')">Ada Lovelace</a></li>
+				<li><a href="#" onclick="entrar('alan')">Alan Turing</a></li>
+				<li><a href="#" onclick="entrar('grace')">Grace Hopper</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Página 2 -->
+	<div id="page-chat">
+		<header id="header-room">
+			<section class="title">Realchat</section>
+			<button type="button">Sair</button>
+		</header>
+
+		<div class="box-mensagens"></div>
+
+		<footer>
+			<input type="text" id="mensagem" name="mensagem">
+			<button type="button" onclick="enviarMensagem()">Enviar</button>
+		</footer>
+	</div>	
+
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		// Inserir configurações apiKey firebase
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	  <script src="app.js"></script>
+</body>
+</html>
